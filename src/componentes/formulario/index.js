@@ -27,7 +27,10 @@ const Formulario = () => {
 
     const aoSalvar = (event) => {
         event.preventDefault()
-        console.log('Formulário submetido', nome, cargo, imagem)
+        console.log('Nome:', nome);
+        console.log('Cargo:', cargo);
+        console.log('Imagem:', imagem);
+        console.log('Time:', time);
     }
 
 
