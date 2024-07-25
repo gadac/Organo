@@ -5,7 +5,7 @@ import { useState } from 'react'
 import './formulario.css'
 
 
-const Formulario = () => {
+const Formulario = (props) => {
     
     const times = [
         'Marketing',
@@ -27,10 +27,12 @@ const Formulario = () => {
 
     const aoSalvar = (event) => {
         event.preventDefault()
-        console.log('Nome:', nome);
-        console.log('Cargo:', cargo);
-        console.log('Imagem:', imagem);
-        console.log('Time:', time);
+        props.aoColaboradorCadastrado({
+            nome,
+            cargo,
+            imagem,
+            time
+        })
     }
 
 
